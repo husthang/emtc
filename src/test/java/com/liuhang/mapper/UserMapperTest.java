@@ -18,8 +18,8 @@ public class UserMapperTest {
     private UserMapper userMapper;
 
     @Test
-    public void testAdd() throws Exception {
-        userMapper.addUser(new User(1, "liu1", "123", "sal", "headurl"));
+    public void addUserTest() throws Exception {
+//        userMapper.addUser(new User(1, "liu1", "123", "sal", "headurl"));
     }
 
 }

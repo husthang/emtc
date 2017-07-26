@@ -20,11 +20,7 @@ public class User implements Serializable {
         this.headUrl = headUrl;
     }
 
-    public User(String name) {
-        this.name = name;
-        this.password = "";
-        this.salt = "";
-        this.headUrl = "";
+    public User() {
     }
 
     public String getName() {

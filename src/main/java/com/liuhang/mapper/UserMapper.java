@@ -3,6 +3,7 @@ package com.liuhang.mapper;
 import com.liuhang.domain.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * Created by liuhang on 2017/7/19.
@@ -17,5 +18,10 @@ public interface UserMapper {
             ") values (#{name},#{password},#{salt},#{headUrl})"})
     int addUser(User user);
 
+    @Select({"select ", SELECT_FIELDS, "from", TABLE_NAME, "where id=#{id}"})
+    User selectUserById(int id);
+
+    @Select({"select ", SELECT_FIELDS, "from", TABLE_NAME, "where name=#{name}"})
+    User selectUserByName(String name);
 
 }
